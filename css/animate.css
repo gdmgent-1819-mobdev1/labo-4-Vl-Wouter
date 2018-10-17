@@ -1,0 +1,43 @@
+@keyframes moveRight {
+    0% {
+        transform: translateX(0)    ;
+        -webkit-transform: translateX(0)    ;
+        -moz-transform: translateX(0)    ;
+        -ms-transform: translateX(0)    ;
+        -o-transform: translateX(0)    ;
+    }
+    100% {
+        transform: translateX(50vw)    ;
+        -webkit-transform: translateX(50vw)    ;
+        -moz-transform: translateX(50vw)    ;
+        -ms-transform: translateX(50vw)    ;
+        -o-transform: translateX(50vw)    ;
+    }
+}
+
+.move--out {
+    animation-name: moveRight;
+    animation-direction: normal;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+}
+
+.move--in {
+    animation-name: moveRight;
+    animation-direction: reverse;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+}
+
+.out {
+    transform: translateX(50vw);
+    -webkit-transform: translateX(50vw);
+    -moz-transform: translateX(50vw);
+    -ms-transform: translateX(50vw);
+    -o-transform: translateX(50vw);
+}
+
+.in {
+    z-index: 1;
+    display: block;
+}

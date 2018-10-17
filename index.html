@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu:400,700" rel="stylesheet">
+  <!-- own CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- MapBox -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+  <div class='app'>
+      <div class='header__block'>
+        <h1 class='logo__text'>Ginder</h1>
+        <div class='buttons__right'><button class='btn btn-flat' id='desktopList'><i class="fas fa-bars"></i></button></div>
+      </div>
+      <div class='map__block' id="map"></div>
+      <div class='app__block'> 
+        <div class='profile__block' draggable="true" id='profilearea'>
+
+        </div>
+        <div class='button__block'>
+          <button class='btn btn__round btn--red' id='dislike'><i class="fas fa-times"></i></button>
+          <button class='btn btn__round--small btn--light' id="showmap"><i class="fas fa-map-marker-alt"></i></button>
+          <button class='btn btn__round btn--green' id='like'><i class="fas fa-heart"></i></button>
+        </div>
+        <div class='button__block'>
+          <button class='btn listbtn btn__rect btn--light' id="showList">Show List</button>
+        </div>
+      </div>
+      <div class='sidebar hidden' id='list'>
+          <button type='button' class='btn listbtn btn--lightred' id='hideList'><i class="fas fa-times"></i></button>
+          <h3 class='list__title'>Liked</h3>
+          <div class='list__people' id='likeList'>
+              <!-- <div class='list__item'>
+                  <img src='https://via.placeholder.com/100x100' alt='test' class='list__img'>
+                  <p>Name</p>
+                  <button type='button' class='btn btn__round--small btn--red'><i class="fas fa-times"></i></button> 
+              </div> -->
+          </div>
+          <h3 class='list__title'>Disliked</h3>
+          <div class='list__people' id='dislikeList'></div>
+      </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+  <script src="js/classes.js"></script>
+  <script src="js/main.js"></script>
+  <script src='js/extra.js'></script>
+  <script>
+    
+  </script>
+</body>
+</html>

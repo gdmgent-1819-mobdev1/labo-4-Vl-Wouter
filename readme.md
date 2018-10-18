@@ -6,5 +6,6 @@ Tinder v3
 
 * [x] Port over v2
 * [x] Redesign to make profile swipeable
-* [ ] Add drag on desktop
+* [x] Add drag on desktop
+* [x] make list hideable
 * [ ] Implement swipe

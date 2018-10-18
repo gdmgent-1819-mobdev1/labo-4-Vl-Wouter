@@ -142,7 +142,7 @@ function rate(rating) {
     let home = JSON.parse(getLocal('coords_client'));
     map.flyTo({
         center: [home.lng, home.lat],
-        zoom: 9
+        zoom: 10
     });
 }
 
@@ -201,8 +201,8 @@ function flyMap(id) {
         'paint': {
             'circle-color': color,
             'circle-radius': {
-                'base': 10,
-                'stops': [[9, 35], [12, 40], [22, 180]]
+                'base': 50,
+                'stops': [[9, 35], [10, 150], [22, 180]]
             },
             'circle-opacity': 0.5
         }

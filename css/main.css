@@ -186,6 +186,10 @@ html, body {
   font-size: 1.4rem;
 }
 
+.btn-flat {
+  display: none;
+}
+
 /** iPad */
 @media(min-width: 768px) {
   .app {
@@ -212,10 +216,11 @@ html, body {
   .app {
     display: grid;
     grid-template:
-    'header header' 10%
-    'map list' 90% / 3fr 1fr;
+    'header' 10%
+    'map' 90% / 100vw;
     font-size: 1rem;
     background: var(--light);
+    width: 100vw;
   }
 
   .header__block {
@@ -240,26 +245,56 @@ html, body {
   .map__block {
     grid-area: map;
     height: 100%;
-    z-index: 1;
+    width: 100%;
+    z-index: 0;
   }
 
   .app__block {
     z-index: 2;
-    grid-area: list;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+
+  .button__block:nth-of-type(3) {
+    display: none;
+  }
+
+  .drop__block {
+    /* border: 6px dashed; */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /* background: #23ce6b89; */
+    z-index: 1;
+  }
+  
+  .drop__dislike {
+    width: 50%;
+    left: 0;
+  }
+  
+  .drop__like {
+    width: 50%;
+    right: 0;
   }
 
   .profile__block {
     box-shadow: 0 0 10px #666;
+    background: #ffffffee;
     width: 80%;
     border-radius: 20px  ;
     -webkit-border-radius: 20px  ;
     -moz-border-radius: 20px  ;
     -ms-border-radius: 20px  ;
     -o-border-radius: 20px  ;
+    z-index: 999;
   }
 
   .btn-flat {
@@ -281,10 +316,13 @@ html, body {
   }
 
   .sidebar {
-    grid-area: list;
-    position: relative;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    left: 80%;
     height: 100%;
     overflow-y: auto;
-    z-index: -1;
+    width: 20%;
+    z-index: 998;
   }
 }

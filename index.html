@@ -26,7 +26,7 @@
       <div class='map__block' id="map"></div>
       <div class='app__block'> 
         <div class='profile__block' draggable="true" id='profilearea'>
-
+          
         </div>
         <div class='button__block'>
           <button class='btn btn__round btn--red' id='dislike'><i class="fas fa-times"></i></button>
@@ -37,7 +37,9 @@
           <button class='btn listbtn btn__rect btn--light' id="showList">Show List</button>
         </div>
       </div>
-      <div class='sidebar hidden' id='list'>
+      <div class='drop__block drop__like'></div>
+      <div class='drop__block drop__dislike'></div>
+      <div class='sidebar hidden out' id='list'>
           <button type='button' class='btn listbtn btn--lightred' id='hideList'><i class="fas fa-times"></i></button>
           <h3 class='list__title'>Liked</h3>
           <div class='list__people' id='likeList'>
@@ -56,7 +58,11 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
   <script src="js/classes.js"></script>
   <script src="js/main.js"></script>
+  <!-- Animations -->
   <script src='js/extra.js'></script>
+  <!-- Drag and Drop Desktop -->
+  <script src="js/dragdrop.js"></script>
+  <!-- Hammer.js -->
   <script>
     
   </script>

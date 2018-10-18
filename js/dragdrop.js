@@ -8,22 +8,21 @@ dragStart = (e) => {
 
 dragDrop = (e) => {
   e.preventDefault();
-  console.log(e.toElement);
-  if(e.toElement.classList.contains('drop__block')) {
-    if(e.toElement.classList.contains('drop__dislike')) {
-      console.log('dropped on dislike');
-      rate('like');
-    }
-    else {
-      console.log('dropped on like');
-      rate('dislike');
-    }
+  console.log(e);
+  if(e.x < 800) {
+    rate('dislike');
+  } else if(e.x > 1400) {
+    rate('like');
   }
-};
+}
 
 dragEnd = (e) => e.target.style.opacity = '';
 
-dragOver = (e) => e.preventDefault();
+dragOver = (e) => {
+  e.preventDefault();
+  let profile = document.getElementById('profilearea');
+  profile.style.left = e.x;
+}
 
 
 

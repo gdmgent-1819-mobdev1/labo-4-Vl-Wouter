@@ -253,7 +253,7 @@ html, body {
     z-index: 2;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 80%;
     width: 30%;
@@ -288,13 +288,16 @@ html, body {
   .profile__block {
     box-shadow: 0 0 10px #666;
     background: #ffffffee;
-    width: 80%;
+    width: 100%;
     border-radius: 20px  ;
     -webkit-border-radius: 20px  ;
     -moz-border-radius: 20px  ;
     -ms-border-radius: 20px  ;
     -o-border-radius: 20px  ;
     z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .btn-flat {

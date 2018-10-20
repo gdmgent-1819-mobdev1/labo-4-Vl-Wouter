@@ -1,7 +1,11 @@
+/**
+ * Seems to be a flaw in the assignment
+ * * Once Hammer.js is called it takes over pan and swipe duty from this.
+ */
 let profile = document.querySelector('#profilearea');
 
 dragStart = (e) => {
-  e.target.opacity = .3;
+  e.target.opacity = 1;
   e.dataTransfer.setData("text", profilecount);
   e.dataTransfer.dropEffect = 'move';
 }
@@ -20,9 +24,13 @@ dragEnd = (e) => e.target.style.opacity = '';
 
 dragOver = (e) => {
   e.preventDefault();
-  let profile = document.getElementById('profilearea');
-  profile.style.left = e.x;
+  profile.style.transform = `translateX(${e.x})`;
+  if(e.x < 800) {
+
+  }
+  
 }
+
 
 
 
@@ -31,5 +39,4 @@ dragOver = (e) => {
   document.addEventListener('drop', dragDrop, false);
   document.addEventListener('dragend', dragEnd, false);
   document.addEventListener('dragover', dragOver, false);
-
 }) ();

@@ -97,6 +97,7 @@ function showProfile(key) {
     }).then(() => {
         document.getElementById('profilearea').innerHTML = `
         <div class='profile__image'>
+            <div class='rating__block'></div>
             <img src='${profile.photo}' alt='${profile.name}' class='picture__fill'>
         </div>
         <div class='profile__info'>
